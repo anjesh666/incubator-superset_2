@@ -273,8 +273,8 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
 
         appbuilder.add_view(
             DynamicPluginsView,
-            "Plugins",
-            label=__("Plugins"),
+            "PLUGINS",
+            label=__("PLUGINS"),
             category="Manage",
             category_label=__("Manage"),
             icon="fa-puzzle-piece",
@@ -284,8 +284,8 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
         )
         appbuilder.add_view(
             CssTemplateModelView,
-            "Css Templates",
-            label=__("Css Templates"),
+            "CSS TEMPLATES",
+            label=__("CSS TEMPLATES"),
             icon="fa-css3",
             category="Manage",
             category_label=__("Manage"),
@@ -327,8 +327,8 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
         # Add links
         #
         appbuilder.add_link(
-            "Import Dashboards",
-            label=__("Import Dashboards"),
+            "IMPORT DASHBOARDS",
+            label=__("IMPORT DASHBOARDS"),
             href="/datadissection/import_dashboards/",
             icon="fa-cloud-upload",
             category="Manage",
@@ -366,16 +366,16 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
         )
         appbuilder.add_view(
             TaggedObjectsModelView,
-            "All Entities",
-            label=__("All Entities"),
+            "ALL ENTITIES",
+            label=__("ALL ENTITIES"),
             icon="",
             category_icon="",
             menu_cond=lambda: feature_flag_manager.is_feature_enabled("TAGGING_SYSTEM"),
         )
         appbuilder.add_view(
             TagModelView,
-            "Tags",
-            label=__("Tags"),
+            "TAGS",
+            label=__("TAGS"),
             icon="",
             category_icon="",
             menu_cond=lambda: feature_flag_manager.is_feature_enabled("TAGGING_SYSTEM"),
@@ -383,8 +383,8 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
         appbuilder.add_api(LogRestApi)
         appbuilder.add_view(
             LogModelView,
-            "Action Log",
-            label=__("Action Log"),
+            "ACTION LOG",
+            label=__("ACTION LOG"),
             category="Security",
             category_label=__("Security"),
             icon="fa-list-ol",
@@ -400,8 +400,8 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
 
         appbuilder.add_view(
             AlertView,
-            "Alerts & Report",
-            label=__("Alerts & Reports"),
+            "ALERTS & REPORTS",
+            label=__("ALERTS & REPORTS"),
             category="Manage",
             category_label=__("Manage"),
             icon="fa-exclamation-triangle",
@@ -410,8 +410,8 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
 
         appbuilder.add_view(
             AnnotationLayerView,
-            "Annotation Layers",
-            label=__("Annotation Layers"),
+            "ANNOTATION LAYERS",
+            label=__("ANNOTATION LAYERS"),
             href="/annotationlayer/list/",
             icon="fa-comment",
             category_icon="",
@@ -421,8 +421,8 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
 
         appbuilder.add_view(
             AccessRequestsModelView,
-            "Access requests",
-            label=__("Access requests"),
+            "ACCESS REQUESTS",
+            label=__("ACCESS REQUESTS"),
             category="Security",
             category_label=__("Security"),
             icon="fa-table",
@@ -431,9 +431,9 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
 
         appbuilder.add_view(
             RowLevelSecurityView,
-            "Row Level Security",
+            "ROW LEVEL SECURITY",
             href="/rowlevelsecurity/list/",
-            label=__("Row Level Security"),
+            label=__("ROW LEVEL SECURITY"),
             category="Security",
             category_label=__("Security"),
             icon="fa-lock",
